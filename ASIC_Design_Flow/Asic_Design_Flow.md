@@ -251,11 +251,11 @@ In this way, we can optimize the Placement upto a large extent.
 Clock tree synthesis (CTS) is a crucial step in the design of digital integrated circuits (ICs), particularly in very large scale integration (VLSI) design. It involves the generation of a network of clock distribution lines throughout the chip to ensure that the clock signal reaches all sequential elements (like flip-flops) synchronously and with minimum skew. 
 It ensures the building of Clock tree in such a way that the clock signal will have a  same delay or latency time for every functional block to travel from clock source to clock destination at the functional blocks.
 
-![alt text](ASIC_3/good_cts.png)
+![alt text](ASIC_3/bad_cts.png)
 
 Above one is not valid in Clock tree syntheiss.
 
-![alt text](ASIC_3/bad_cts.png)
+![alt text](ASIC_3/good_cts.png)
 
 Not only considering about maintaining the same delay for proper working of the circuit, we also have to consider the signal quality. And to maintain the signal integrity, we will place buffers. While building a clock Tree with buffers, we have to follow certain rules, like considering the wire length to place buffers at a distance from other buffers.
 
