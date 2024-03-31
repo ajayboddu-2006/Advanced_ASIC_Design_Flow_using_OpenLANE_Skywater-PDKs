@@ -4,18 +4,21 @@ Welcome to the ASIC (Application-Specific Integrated Circuit) Design Flow docume
 
 ## Table of Contents
 
-1. [Introduction to ASIC Design](#introduction)
-2. [Steps in RTL to GDSII](#flow-overview)
-3. [Specification and Architecture](#spec-and-arch)
-4. [Logic Design / Functional Verification](#rtl-design)
-5. [Synthesis](#synthesis)
-6. [Floorplanning & Powerplanning ](#floorplanning)
-7. [Placement](#place-and-route)
-8. [Static Timing Analysis](#static-timing-analysis)
-9. [Routing](#route)
-10. [Sign-Off](#sign)
-11. [GDSII](#gds)
-12. [Conclusion](#conclusion)
+- [ASIC Design Flow](#asic-design-flow)
+  - [Table of Contents](#table-of-contents)
+    - [ASIC DESIGN FLOW](#asic-design-flow-1)
+- [Steps in RTL to GDSII Flow](#steps-in-rtl-to-gdsii-flow)
+    - [Specification and Architecture](#specification-and-architecture)
+  - [Logic Design / Functional Verification](#logic-design--functional-verification)
+  - [RTL Synthesis](#rtl-synthesis)
+  - [Floorplanning \& Powerplanning](#floorplanning--powerplanning)
+  - [Placement](#placement)
+  - [Clock Tree Synthesis](#clock-tree-synthesis)
+  - [Static Timing Analysis](#static-timing-analysis)
+  - [Routing](#routing)
+  - [Sign Off](#sign-off)
+  - [GDSII](#gdsii)
+    - [Conclusion](#conclusion)
 
 ---
 
@@ -27,11 +30,11 @@ Welcome to the ASIC (Application-Specific Integrated Circuit) Design Flow docume
 <a id="introduction"></a>
 Very-large-scale integration is the process of creating an integrated circuit by combining millions or billions of MOS transistors onto a single chip. VLSI began in the 1970s when MOS integrated circuit chips were developed and then widely adopted, enabling complex semiconductor and telecommunication technologies. 
 
-![alt text](Images/ASIC/design_flow.png)
+![alt text](ASIC/design_flow.png)
 
 The “Y chart” in VLSI (Very Large Scale Integration) refers to a graphical representation that illustrates the interrelation between the design, fabrication, and test processes in semiconductor manufacturing. It is called the “Y chart” because of its shape, which resembles the letter “Y” .
 
-![alt text](Images/ASIC/y_diagram.png)
+![alt text](ASIC_2/y_diagram.png)
 
 # Steps in RTL to GDSII Flow
 ---------------------------------
@@ -43,7 +46,7 @@ GDSII - Graphic Design System II
 
 The RTL to GDSII flow is a process in VLSI design that converts an RTL description of a digital circuit into a physical layout ready for fabrication. It involves stages like RTL synthesis, floor planning, placement, routing, and ultimately generating the GDSII file format, which contains the layout data. This meticulous process ensures the final IC layout accurately reflects the desired functionality and meets fabrication requirements 
 
-![alt text](Images/ASIC/rtl_gdsii.png)
+![alt text](ASIC/rtl_gdsii.png)
 
 ---
  ### Specification and Architecture
@@ -58,7 +61,7 @@ The RTL to GDSII flow is a process in VLSI design that converts an RTL descripti
 
 RTL (Register Transfer Level) design involves describing digital circuits at a level where data is transferred between registers. Functional verification ensures that the RTL design behaves as intended. Simulations, primarily used for verification, involve test benches with stimuli and expected responses. RTL is specified in either of the following languages.
 
-![alt text](Images/ASIC/verilgo_vhdl.png)
+![alt text](ASIC_2/verilgo_vhdl.png)
 <br><br>
 
 ## RTL Synthesis
@@ -67,17 +70,17 @@ RTL (Register Transfer Level) design involves describing digital circuits at a l
 RTL synthesis is a key stage in VLSI design where RTL descriptions of digital circuits are converted into gate-level netlists. This involves mapping RTL constructs to logic gates and flip-flops from a technology library while optimizing for area, timing, and power. The output is a gate-level netlist used for subsequent design stages like physical design and verification.
 Convertes RTL to a circuit out of components from the Standard cell Library(SCL)
 
-![alt text](Images/ASIC/synthesis.png)
+![alt text](ASIC_2/synthesis.png)
 
 <u>**Standard Cell:**</u> 
 
 Standard cells are pre-designed components used in VLSI design to build digital integrated circuits efficiently. They come in libraries containing various logic functions like AND, OR, and flip-flops. Each cell is characterized by its performance, power, and area metrics. Designers use these cells as building blocks to create custom digital circuits.
 
-![alt text](Images/ASIC/examples_standard_cell.png)
+![alt text](ASIC/examples_standard_cell.png)
 
 Standard cells are of different sizes and may be same cells is of different sizes and properties.
 
-![alt text](Images/ASIC/size_of_standard_cell.png)
+![alt text](ASIC_2/size_of_standard_cell.png)
 
 <br><br>
 ## Floorplanning & Powerplanning 
@@ -88,11 +91,11 @@ Standard cells are of different sizes and may be same cells is of different size
  Floorplanning involves determining the locations, shape, size of modules in a chip and as such it estimates the chip area, delay and the wiring congestion, thereby providing a ground work for layout. Partitining is one of the process which plays a key role before floorplanning. Design partitioning is the practice of dividing a system on chip (SoC) into small blocks. This allows you to efficiently manage semiconductor designs as a related set of functional blocks. 
 It is importat to note that the partitioning should be done in such a way that the intrconnections between the partitioned blocks should be minimum.
 
-![alt text](Images/ASIC/Partitioning.png)
+![alt text](ASIC_3/Partitioning.png)
 
 Partitioning and Floor Planning are two of the design processes in the VLSI design and are used to reduce the size of the circuit. Floorplanning includes partition of chip die into different system blocks and also I/O pads.
 
-![alt text](Images/ASIC/Floorplan.png)
+![alt text](ASIC_3/Floorplan.png)
 
 Every module has been assigned an appropriate area and aspect ratio.
 Every pin of the module has connection with other modules or periphery
@@ -105,7 +108,7 @@ Power planning is a sub-step of floor planning in a physical design flow. In th
 During power planning, the VDD and VSS rails also have to be defined. Objective of power planning is to meet It involves the distribution of power supplies and design of power distribution networks(PDN) to ensure stable and reliable power delivery to all components. Power planning involves- calculating number of power pins required, number of rings and straps, width of rings and straps and IR drop. These are placed on the upper metal layers, as these have to be thicker than the lower metal layers, to have low resistance.<br>
 Power planning includes performing power integrity analysis to ensure that the voltage levels across the chip remain within specified tolerances under varying operating conditions. 
 
-![alt text](Images/ASIC/Powerplan.png)
+![alt text](ASIC_3/Powerplan.png)
 
 There are different types types of floorplannings which involves different pre-designed functional blocks.Her we are going to learn about two types of which includes the placement of pre-designed functional blocks.
 
@@ -114,7 +117,7 @@ Macro planning allows you to determine how much shelf space each of your product
 
 <u>**Macros:**</u> <br>Macros are predefined functional blocks with specific functionalities, such as processors, memory arrays, I/O interfaces. Macros are typically designed and verified independently and are then integrated into the chip design as reusable components.
 
-![alt text](Images/ASIC/macros.png)
+![alt text](ASIC/macros.png)
 
 During macro placement, designers make strategic decisions regarding the placement of macros based on various factors including functional hierarchy, connectivity, power and signal integrity considerations, and physical design constraints.
 
@@ -122,25 +125,25 @@ During macro placement, designers make strategic decisions regarding the placeme
 <u>**IP integration or IP block placement:**</u><br>
 The floorplanning of IPs (Intellectual Properties) is commonly referred to as "IP integration" or "IP block placement" in the context of VLSI (Very Large Scale Integration) design. This process involves organizing and positioning IP cores within the chip's silicon die to optimize chip layout, signal routing, power distribution, and other design considerations. 
 
-![alt text](Images/ASIC/ip.png)
+![alt text](ASIC/ip.png)
 
 <u>**IP’s:**</u> <br>
 These are pre-designed and pre-verified functional units or modules that serve specific purposes within an integrated circuit (IC) or chip design. Semiconductor IP cores are essential building blocks used by chip designers to accelerate the development process, reduce design complexity, and achieve faster time-to-market for new semiconductor products. 
 Semiconductor IPs can include various types of functional blocks, such as Processor cores, memory cores, interface controllers etc.
 
-![alt text](Images/ASIC/IP_examples.png)
+![alt text](ASIC_3/IP_examples.png)
 
 IP’s are also called as Preplaced cells. Automated placement and routing tools places the remaining logical cells in the design onto chip.
 This floorplanning should follow certain rules to maintain signal integrity and meet timing requirements.
 
-![alt text](Images/ASIC/block_floorplan.png)
+![alt text](ASIC_3/block_floorplan.png)
 
 <u>**Differences between Macros & IP’s :**</u> <br>
 Macros and IPs serve as reusable functional blocks in VLSI design, yet they differ in ownership, licensing, design processes, customization options, and market availability. Macros are internally developed and owned by the designing company, tailored to specific chip requirements, and not typically licensed externally. IPs, on the other hand, are commercially available from IP vendors, undergoing rigorous design and verification processes, and are licensable for integration into multiple projects. While macros can be customized to some extent, IPs often offer more configurable options. Despite similarities in functionality, their distinctions lie in their origin, accessibility, and flexibility within the chip design ecosystem. 
 
 <u>**Concepts of Floorplanning :**</u> <br>
 
-![alt text](Images/ASIC/Concept_of_floorplan.png)
+![alt text](ASIC/Concept_of_floorplan.png)
 
 In VLSI design, floorplanning is a critical early-stage process that involves the arrangement of functional blocks and components within the chip area, known as the die.
 
@@ -152,20 +155,20 @@ In VLSI design, core and die dimensions adhere to strict rules ensuring optimal 
 
 <u>**Utilization rate:**</u> <br>It is the ratio of the total cell area (for hard macros and standard cells or soft macro cells) to the core area.
 
-![alt text](Images/ASIC/Utilization_rate.png)
+![alt text](ASIC_2/Utilization_rate.png)
 
 <u>**Aspect ratio:**</u> <br> Aspect ratio will decide the size and shape of the chip. It is the ratio between horizontal routing resources to vertical routing resources (or) ratio of height and width. 
 Aspect ratio is a critical parameter in semiconductor manufacturing as it affects various aspects of the fabrication process, including lithography, etching, and dopant diffusion. Designers often optimize aspect ratios to meet performance, power and manufacturability requirements in integrated circuit designs.
 
-![alt text](Images/ASIC/Aspect_ratio.png)
+![alt text](ASIC_3/Aspect_ratio.png)
 
 The following example, the utilization rate is 100% that is the chip is completely used by the functional blocks and the aspect ratio is 1 representing the shape of the die as square.
 
-![alt text](Images/ASIC/example_1_util_aspect.png)
+![alt text](ASIC/example_1_util_aspect.png)
 
 In the following example, the Utilization rate is 50% indicating that the half of the part of the die area is occupied by the functional blocks or macros or IP’s. And the aspect ratio is 0.5 representing a rectangle shape.
 
-![alt text](Images/ASIC/example_2_util_aspect.png)
+![alt text](ASIC/example_2_util_aspect.png)
 
 <u>**Concepts of PowerPlanning:**</u><br>
 
@@ -174,11 +177,11 @@ One of the primary functions of decoupling capacitors is to regulate the local v
 Decoupling capacitors absorb high-frequency noise generated by switching activities in digital circuits. By providing a low-impedance path to ground, they effectively filter out noise from the power supply lines, preventing it from propagating to other parts of the chip and causing interference or signal integrity issues 
 Decoupling capacitors plays a crucial role in noise filtering, transient response, resonance supression and Placement optimization.
 
-![alt text](Images/ASIC/decoupling_capacitance.png)
+![alt text](ASIC/decoupling_capacitance.png)
 
 Following shows the powerplanning on a die forming a grid to maintain signal integrity to every functional block.
 
-![alt text](Images/ASIC/poerplan_floorplan.png)
+![alt text](ASIC/poerplan_floorplan.png)
 
 ## Placement 
 <a id="place-and-route"></a>
@@ -188,7 +191,7 @@ Minimizing the total wire length is a primary objective during placement. Shorte
 Congestion occurs when certain regions of the chip become densely packed, leading to routing difficulties and potential timing violations. Effective placement algorithms employ congestion-aware techniques to evenly distribute components and alleviate congestion hotspots. 
 Proper spacing and alignment of cells are essential to ensure manufacturability and reliability. Placement algorithms enforce spacing rules to prevent design rule violations and optimize chip manufacturability. 
 
-![alt text](Images/ASIC/placement.png)
+![alt text](ASIC/placement.png)
 
 There are mainly two types of Placement methodologies.
 - Global Placement
@@ -196,47 +199,47 @@ There are mainly two types of Placement methodologies.
 
 <u>**Global Placement:**</u> <br>Global placement, also known as coarse placement or floorplanning, focuses on allocating large functional blocks or macros to specific regions of the chip. It establishes a high-level floorplan that defines the approximate placement of major components, such as processor cores, memory arrays, and I/O pads. Global placement helps set the overall chip organization and layout constraints before detailed placement 
 
-![alt text](Images/ASIC/Global_placement.png)
+![alt text](ASIC_3/Global_placement.png)
 
 <u>**Detailed Placement:**</u> <br> Detailed placement, also referred to as fine placement, involves refining the positions of individual cells or standard cells within each functional block or macro. Detailed placement algorithms optimize the placement of cells to minimize wirelength, reduce congestion, and meet timing constraints. This stage of placement requires considering detailed routing considerations and physical design rules.
 
-![alt text](Images/ASIC/Detailed_placement.png)
+![alt text](ASIC_3/Detailed_placement.png)
 
 For Plaecement, all Standard cells are present in library.
 
 <u>**Library:**</u><br> A "Library" typically refers to a collection of standard cell layouts, each representing a specific logic function or gate. These standard cells are pre-designed and characterized for various performance metrics such as timing, power, area, and signal integrity. 
 During placement, designers choose appropriate standard cells from the library to implement the desired functionality of the circuit. The library contains a variety of cells, ranging from basic logic gates (such as NAND, NOR, AND, OR gates) to more complex functional units (such as flip-flops, multiplexers, adders, etc.) 
 
-![alt text](Images/ASIC/Standard_cell_library.png)
+![alt text](ASIC_2/Standard_cell_library.png)
 
 In library, there may be same types of standard cells of different driving capabilities based on the size of the standard cells. As the size increases, resistance decreases and the driving capability increases.
 
-![alt text](Images/ASIC/Size_of_standard_cell_examples.png)
+![alt text](ASIC_2/Size_of_standard_cell_examples.png)
 
 For example, consider the following netlist, with various logic elements.
 
-![alt text](Images/ASIC/Placement_netlist.png)
+![alt text](ASIC_3/Placement_netlist.png)
 
 Let’s take the Standard cells from the library for the elements of above netlist.
 
-![alt text](Images/ASIC/Placemnet_blocks.png)
+![alt text](ASIC_3/Placemnet_blocks.png)
 
 After the placement we need some placement optimization to make sure that the design is should meet the timing requirement and should not not include any timing violations. The design after placement is as follows:
 
-![alt text](Images/ASIC/Placemet_phase.png)
+![alt text](ASIC_3/Placemet_phase.png)
 
 In the process of placement, some of the inter connnections between the functional blocks will a much larger delay and because of this signal quality may degrade and results in increase of the signal transition delay.<br>
 To solve this issue an do maintain the signal quality from the data path source to the destination we place buffers in between them.
 Buffers are often used to improve signal quality and reduce delay in the transmission of signals. A buffer is a logic gate that receives an input signal and re-transmits it with minimal delay and minimal distortion. 
 
-![alt text](Images/ASIC/buffer.png)
+![alt text](ASIC_3/buffer.png)
 
 As we know, the basic property of buffer is to maintain the input and output through it, same to same without any signal distortion. So buffers are the important part of the placement, to maintain the signal quality.
 
 
 Below is the example, to show the use of buffers in longer delay paths.
 
-![alt text](Images/ASIC/Use_of_buffers.png)
+![alt text](ASIC_2/Use_of_buffers.png)
 
 In this way, we can optimize the Placement upto a large extent.
 
@@ -249,31 +252,31 @@ In this way, we can optimize the Placement upto a large extent.
 Clock tree synthesis (CTS) is a crucial step in the design of digital integrated circuits (ICs), particularly in very large scale integration (VLSI) design. It involves the generation of a network of clock distribution lines throughout the chip to ensure that the clock signal reaches all sequential elements (like flip-flops) synchronously and with minimum skew. 
 It ensures the building of Clock tree in such a way that the clock signal will have a  same delay or latency time for every functional block to travel from clock source to clock destination at the functional blocks.
 
-![alt text](Images/ASIC/good_cts.png)
+![alt text](ASIC/good_cts.png)
 
 Above one is not valid in Clock tree syntheiss.
 
-![alt text](Images/ASIC/bad_cts.png)
+![alt text](ASIC_3/bad_cts.png)
 
 Not only considering about maintaining the same delay for proper working of the circuit, we also have to consider the signal quality. And to maintain the signal integrity, we will place buffers. While building a clock Tree with buffers, we have to follow certain rules, like considering the wire length to place buffers at a distance from other buffers.
 
-![alt text](Images/ASIC/h_cts.png)
+![alt text](ASIC/h_cts.png)
 
 There are different in which we can build a Clock Tree to maintain Signal quality with proper timing requirements.
 Various optimization techniques are applied to the clock tree to further reduce skew and delay. This may involve adjusting the placement and sizing of buffers, optimizing routing paths, and adjusting the clock tree topology. 
 <br><br>
 There are different ways to build Clock trees, some of them are as follows:
 
-![alt text](Images/ASIC/Clock_trees.png)
+![alt text](ASIC_3/Clock_trees.png)
 
 In clock tree synthesis (CTS), the formation of coupling capacitance is a significant consideration as it can impact the performance and reliability of the clock distribution network. Coupling capacitance arises primarily due to the proximity of signal traces (such as clock lines) to each other on the
 chip and can lead to undesirable effects such as clock skew, signal integrity issues, and increased power consumption. If any logic is transmitted through a net that affects another neighbouring net due to capacitive coupling is known as crosstalk.
 
-![alt text](Images/ASIC/Crosstalk_in_cts.png)
+![alt text](ASIC_3/Crosstalk_in_cts.png)
 
 It depends on coupling capacitance between two neighbouring nets, greater the coupling capacitance greater will be the crosstalk. It is an undesirable effect. Coupling capacitance can introduce skew in the clock signals, where different parts of the clock network experience varying delays. This skew can lead to timing violations and impact the overall performance of the chip. 
 
-![alt text](Images/ASIC/Coupled_capacitance_effect_of_bad_cts.png)
+![alt text](ASIC_3/Coupled_capacitance_effect_of_bad_cts.png)
 
 So to improve the clock tree Synthesis without formation of any decoupling capacitance, we have to maintain certain distance between clock lines.<br>
 If we follow such rules, there is no formation of Coupling capacitance between to parallel clock lines, and it results in a proper clock tree formation.<br>
@@ -282,11 +285,11 @@ In clock tree synthesis (CTS), delta delay refers to the difference in delay exp
 <br>
 Modern CTS tools employ sophisticated algorithms to optimize the clock tree structure and minimize delta delay. These algorithms consider factors such as buffer placement, wire routing, and timing constraints to achieve balanced and efficient clock distribution. 
 
-![alt text](Images/ASIC/delat_delay_in_cts.png)
+![alt text](ASIC/delat_delay_in_cts.png)
 
 To make ensure that there is no formation of Decoupling capacitance and there is no effect of delta delay in clock tree synthesis, one of the effective technique known is clock net shielding.
 
-![alt text](Images/ASIC/clock_net_shielding.png)
+![alt text](ASIC/clock_net_shielding.png)
 
 VDD and VSS lines protect the clock signal from coupling and to prevent delta delay.
 <br>
@@ -294,7 +297,7 @@ In clock net shielding, the clock signal is shielded by the vdd and vss signal l
 <br><br>
 After the process of clock net shielding, the layout we can see is as follows:
 
-![alt text](Images/ASIC/final_placement_with_cts.png)
+![alt text](ASIC/final_placement_with_cts.png)
 
 Power Aware CTS:
 Power-aware Clock Tree Synthesis (CTS) is a technique used in VLSI design to optimize clock distribution networks while considering power consumption as a key design metric. Traditional CTS focuses primarily on minimizing clock skew and improving timing characteristics, but power-aware CTS extends this by also addressing power-related issues. <br>
@@ -306,19 +309,19 @@ In Clock Tree Synthesis (CTS), ensuring balanced loading across the clock tree i
 <br>
 Balanced loading ensures that clock signals experience uniform propagation delays as they traverse the tree structure. This balance is essential for meeting setup and hold time requirements across all flip-flops in the design. When every node drives the same load, it helps prevent timing violations by ensuring that clock edges arrive at each flip-flop simultaneously or within the specified timing window.
 
- ![alt text](Images/ASIC/Power_aware_cts.png)
+ ![alt text](ASIC_3/Power_aware_cts.png)
 
 <u>**Delay Tables:**</u> <br>
 In Clock Tree Synthesis (CTS), Delay Tables are essential data structures used to characterize the propagation delay of buffers or inverters utilized in the clock tree. These tables provide detailed information about the delay introduced by each buffer or inverter under various operating conditions, such as input slew rates, output loads, and temperature variations. <br>
 Delay Tables typically consist of a set of delay values corresponding to different input slew rates and output loads. These values are obtained through pre-characterization or simulation of the buffers/inverters under various conditions. Each entry in the table corresponds to the delay introduced by the buffer or inverter for a specific combination of input slew rate and output load. Let us consider the following example
 
-![alt text](Images/ASIC/cts_buffer_power_aware_cts.png)
+![alt text](ASIC/cts_buffer_power_aware_cts.png)
 
 By considering the above values and above circuit, consider the delay tables as below:
 
-![alt text](Images/ASIC/delay_table_1.png)
+![alt text](ASIC/delay_table_1.png)
 
-![alt text](Images/ASIC/Delay_table_2.png)
+![alt text](ASIC_3/Delay_table_2.png)
 
 From these Delay tables, we can get the properties of buffers, the capacitive loads, and the delay of the buffers based of the different skew values and output capacitive loads.
 
@@ -337,7 +340,7 @@ Let’s see some of the timing related terminologies and rules of Static Timing 
 
 <u>**Capture Flop:**</u><br> A "capture flop" is a flip-flop or latch used to capture a signal or data at a specific point in a synchronous digital circuit. It is typically associated with the end of a timing path. Upon receiving the clock signal, the capture flop samples and captures the data input at the specific point in time defined by the clock edge.
 
-![alt text](Images/ASIC/launch_capture_flops.png)
+![alt text](ASIC/launch_capture_flops.png)
 
 <br><br><br><br>
 
@@ -347,38 +350,38 @@ Let’s see some of the timing related terminologies and rules of Static Timing 
 
 <u>**Network latency:**</u><br> Network latency refers to the time delay that occurs when data packets travel from their source to their destination over a computer network. It is a measure of the time it takes for data to traverse the network between two points and is typically measured in milliseconds (ms) or microseconds (µs). 
 
-![alt text](Images/ASIC/Source_network_latency.png)
+![alt text](ASIC_2/Source_network_latency.png)
 <br><br><br><br>
 <u>**Clock Skew:**</u><br>Clock skew refers to the difference in arrival times of a clock signal at different elements or components of a synchronous digital circuit. 
 
-![alt text](Images/ASIC/Pos_Neg_skew.png)
+![alt text](ASIC_3/Pos_Neg_skew.png)
 <br><br><br><br>
 <u>**Slew:**</u><br>"slew" refers to the rate of change of a signal transition, typically measured as the time it takes for a signal to transition between two logic levels (e.g., from low to high or high to low). It represents how quickly the voltage level of a signal changes over time. 
 Slew rate is usually expressed in terms of voltage change per unit of time, such as volts per nanosecond (V/ns). A high slew rate indicates a fast transition, while a low slew rate indicates a slower transition. 
 
-![alt text](Images/ASIC/Slew.png)
+![alt text](ASIC_2/Slew.png)
 
 Let’s understand the difference between Fast Slew and Slow Slew.
 
-![alt text](Images/ASIC/Fast_slow_slew.png)
+![alt text](ASIC_3/Fast_slow_slew.png)
 
 <br><br><br>
 
 <u>**Jitter:**</u><br> Jitter is the variation of the clock period from edge to edge  It is essentially the deviation from the expected or desired timing of signal events. Jitter can occur in both periodic and aperiodic signals. 
 
-![alt text](Images/ASIC/Jitter.png)
+![alt text](ASIC_3/Jitter.png)
 
 <br><br><br>
 
 <u>**Clock Uncertainity:**</u><br> Clock uncertainty, also known as clock skew uncertainty or clock timing uncertainty, refers to the variation or uncertainty in the arrival times of clock signals at different components or elements of a digital circuit. It represents the amount of deviation from the ideal arrival times of clock edges specified by the clock period 
 
-![alt text](Images/ASIC/Uncertainty.png)
+![alt text](ASIC_2/Uncertainty.png)
 
 <br><br><br>
 
 <u>**Propagation delay:**</u> <br>Propagation delay refers to the time taken for a signal to travel from its source to its destination in a digital circuit. It represents the time delay incurred as a signal propagates through various components of the circuit, such as logic gates, wires, and interconnects 
 
-![alt text](Images/ASIC/Propagation_delay.png)
+![alt text](ASIC_3/Propagation_delay.png)
 
 <br><br><br>
 
@@ -388,33 +391,33 @@ Let’s understand the difference between Fast Slew and Slow Slew.
 
  <u>**Clock-to-Q Delay :**</u><br> The delay associated with the capture of data at flip-flops or latches along the path. This includes the time taken for the output of a flip-flop or latch to become stable after the arrival of the clock signal.
 
-![alt text](Images/ASIC/clk_to_q_delay.png)
+![alt text](ASIC_3/clk_to_q_delay.png)
 <br><br><br>
 <u>**Fanout:**</u><br>  "Fanout" refers to the number of logic gates or other load components that can be connected to the output of a specific logic gate or driver without causing performance degradation or violating electrical specifications. 
 Let us consider the following example, for the maximum fanout.
 
-![alt text](Images/ASIC/fanout.png)
+![alt text](ASIC/fanout.png)
 
 <br><br><br>
 
 <u>**Critical path:**</u><br> "Critical path" refers to the longest path through a digital circuit from input to output, where the cumulative delay along this path determines the overall timing performance of the circuit. It represents the path that imposes the most significant constraints on the circuit's operational speed and determines the maximum achievable clock frequency. 
 
-![alt text](Images/ASIC/Critical_path.png)
+![alt text](ASIC_3/Critical_path.png)
 
 Let’s see an example of about the Critical Path delay.
 
-![alt text](Images/ASIC/Critical_path_delay.png)
+![alt text](ASIC/Critical_path_delay.png)
 
 <br><br><br>
 
 <u>**False Path :**</u><br> A "False path" refers to a path in a circuit that is not used to propagate data during normal operation. Despite existing in the design, signals do not flow along a false path during normal operation, either due to conditional logic or because the path is never activated. 
 
-![alt text](Images/ASIC/False_path.png)
+![alt text](ASIC/False_path.png)
 
 <br><br><br>
 <u>**Multicycle path:**</u><br> A multicycle path, also known as a multicycle constraint, refers to a timing path in a digital circuit where the data does not need to be captured or launched on every clock cycle. Instead, the data may be valid for multiple clock cycles, allowing for a longer timing window for data capture or launch.
 
-![alt text](Images/ASIC/Multicycle_path.png)
+![alt text](ASIC/Multicycle_path.png)
 
 <br><br><br>
 
@@ -434,12 +437,12 @@ Let’s see an example of about the Critical Path delay.
 The setup timing check can be measured as following for ideal clocks.
 The setup timing checked always at the next clock edge.
 
-![alt text](Images/ASIC/setup_time_analysis.png)
+![alt text](ASIC/setup_time_analysis.png)
 
 Here, for setup timing analysis, the total delay i.e, from clk of launch flop to the capture flop including the combo. Delay must be less than the clock period
 As we know, in real time, the concept of set up time, clock jitter, clock uncertainty also exists, the timing check for setup can be modified as follows:
 
-![alt text](Images/ASIC/setup_analysis_with_formula.png)
+![alt text](ASIC/setup_analysis_with_formula.png)
 
 By considering the real time context, the total delay i.e, from clk of launch flop to the capture flop including the combo. Delay must be less than the clock period    by considering the uncertainty and skew.
 The equation for setup timing analysis is given as follows:
@@ -465,7 +468,7 @@ If Slack is negative, that means, there is a Setup violation, and we have to opt
 For real clocks the buffers are also present in the Clock path. 
 Let’s see an example which considers the setup timing check with real clocks. While considering the real clocks, the delay of buffers is also considered as a part of the Clock Time period and as well as in Arrival time.
 
-![alt text](Images/ASIC/setup_analysis_with_real_clocks.png)
+![alt text](ASIC/setup_analysis_with_real_clocks.png)
 
 <br><br><br>
 
@@ -473,7 +476,7 @@ Let’s see an example which considers the setup timing check with real clocks. 
 The setup timing check can be measured as following for ideal clocks.
 The setup timing checked always at the same clock edge.
 
-![alt text](Images/ASIC/Hold_analysis.png)
+![alt text](ASIC/Hold_analysis.png)
 
 Here, for setup timing analysis, the total delay i.e, from clk of launch flop to the capture flop including the combo. Delay must be less than the Hold time.
 
@@ -482,7 +485,7 @@ As we know, in real time i.e., for real clocks, the concept of Hold uncertainty,
 
 So the timing check for Hold can be modified as follows:
 
-![alt text](Images/ASIC/Hold_analysis_with_real_clocs.png)
+![alt text](ASIC/Hold_analysis_with_real_clocs.png)
 
 <br><br>
 
@@ -533,7 +536,7 @@ But in practical case, it is not possible, we have to minimize the Skew nearer t
 
  Routing in VLSI is making physical connections between signal pins using metal layers. Following Clock Tree Synthesis (CTS) and optimization, the routing step determines the exact pathways for interconnecting standard cells, macros, and I/O pins. 
 
-![alt text](Images/ASIC/Routing.png)
+![alt text](ASIC/Routing.png)
 
 <br>
 
@@ -548,44 +551,44 @@ Each metal layer in a grid based routing system has its tracks and preferred rou
 
 - <u>**Global Routing:**</u><br> Global route assigns nets to particular metal layers and global routing cells. The global route aims to avoid crowded global cells while making as few diversions as possible. Global routes also avoid pre-routed P/G, placement, and routing bottlenecks.
 
-![alt text](Images/ASIC/Global_rouitng.png)
+![alt text](ASIC/Global_rouitng.png)
 
 <br><br>
 
 - <u>**Track Assignment:**</u><br> It allocates each net to a certain track and lays down actual metal traces. To reduce the number of vias, it attempts to create long, straight lines. At this stage, physical DRC(Design Rule Check) is not considered.
 
-![alt text](Images/ASIC/Track_assignment.png)
+![alt text](ASIC/Track_assignment.png)
 
 <br><br>
 
 - <u>**Detail Routing:**</u> Detail routing seeks to repair any DRC violations following track assignment using a set size small region (Sbox). The detailed routing goes through the whole design box by box until the routing pass is finished . It also performs timing driven routing.
 
-![alt text](Images/ASIC/Detailed_routing.png)
+![alt text](ASIC/Detailed_routing.png)
 
 <br><br>
 
 - <u>**Search and repair:**</u><br> This resolves any remaining DRC breaches using many iterative loops with progressively bigger Sbox sizes. DRC rules make sure that the layout is meeting is following the certain design rules.<br>
 Below is the Part of a real chip viewed by an electron microscope (with artificial colors). In the below diagram, we can see that the wires and pins are on lower planes connected by vias (light blue) 
 
-![alt text](Images/ASIC/chip_microscopic_view.png)
+![alt text](ASIC/chip_microscopic_view.png)
 
 Let us consider the below layout which had crossed the design steps of Floorplanning , placement, Clock tree synthesis, Static timing analysis.
 
-![alt text](Images/ASIC/routed_design.png)
+![alt text](ASIC/routed_design.png)
 
 There are so many algorithms that are followed in routing process. One of such algorithm is Lee’s algorithm used in the purpose of Maze routing.<br>
 This algorithm is also known as Maze routing Lee’s algorithm.  Lee algorithm searches for the shortest path between two terminals and guarantees to find a route between two points if the connection exists. <br>
 This algorithm represents the routing layer as a grid as shown below.
 
-![alt text](Images/ASIC/routed_grid.png)
+![alt text](ASIC/routed_grid.png)
 
 This algorithm will be followed by selecting the adjacent cells of every cell excepting the diagonal cells. It is shown below.
 
-![alt text](Images/ASIC/maze_routing.png)
+![alt text](ASIC/maze_routing.png)
 
 The process will continue until the destination is reached and then the the routing happens as shown below.
 
-![alt text](Images/ASIC/routed_using_maze_routing_algorithm.png)
+![alt text](ASIC/routed_using_maze_routing_algorithm.png)
 
 Now will get the routed layout, and after that, as a part of routing process, DRC cleaning process will takes place which ensures, whether the layout follows all specified DRC rules.
 
@@ -599,25 +602,25 @@ These all are mentioned below:
 
 - <u>**Wire width:**</u><br> In vlsi fabrication, photolithography technique is used to form the metal connections.  This technique used light to make metal connections.As light have a minimum wavelength, using it, we can make minimum width of metal connections. It means the optical wavelength of light can make metal connections.
 
-![alt text](Images/ASIC/drc_wire_width.png)
+![alt text](ASIC/drc_wire_width.png)
 
 <br><br>
 
 - <u>**Wire pitch:**</u><br>  As per DRC, there is another rule for wire pitch and it should be maintained ,minimum. We have to optimize the layout, to maintain a minimum pitch.
 
-![alt text](Images/ASIC/drc_wire_pitch.png)
+![alt text](ASIC/drc_wire_pitch.png)
 
 <br><br>
 
 - <u>**Wire spacing:**</u><br> The wire spacing between two data paths, or critical paths, should be maintained and it should not go below the minimum limit. As we know that if we make interconnections, by violating the minimum wire pitch rule, it may results in the formation of coupling capacitance, and may results in crosstalk issues and Signal integrity issues So, it it is important to maintain a minimum distance. For this kind of problem, it is not possible, to shield the data path, to prevent it form crosstalk issues. As net shielding is a difficult task, it is only applicable to critical paths in a layout, like high speed clock signals or some critical data paths.
 
-![alt text](Images/ASIC/drc_wire_spacing.png)
+![alt text](ASIC/drc_wire_spacing.png)
 
 <br><br>
 
 - <u>**Via width:**</u><br>(Via – The dip of a whoel between ywo or more metal layers used to connnect layers.) The DRC rule specify the via width should be minimum., It can be more, but it can’t be minimum to violate DRC rules.
 
-![alt text](Images/ASIC/drc_via_width.png)
+![alt text](ASIC/drc_via_width.png)
 
 <br><br>
 
@@ -627,7 +630,7 @@ These all are mentioned below:
 
 Major problems in routing arrives when interconects are formed between the routes, so we have to avoid such DRC violations.
 
-![alt text](Images/ASIC/drc_violation.png)
+![alt text](ASIC/drc_violation.png)
 
 <br><br><br>
 
@@ -636,7 +639,7 @@ After the DRC checking, the next step is parasitic extraction.
 Parasitic extraction is a vital process in integrated circuit (IC) design, focusing on identifying and characterizing unintended electrical effects known as parasitics. These effects, including resistance, capacitance, 
 Every net has its own resistance and capacitance, so parasitic extraction refers to the extraction of these parameters and make ensure whether the properties doesn’t violate any required parameters in physical design.
 
-![alt text](Images/ASIC/Parasitic_extraction.png)
+![alt text](ASIC/Parasitic_extraction.png)
 
 Capacitance and Resistance of interconnects, known as nets, significantly influence the performance and behavior of integrated circuits. Capacitance directly impacts signal propagation delay along interconnects, contributing to the RC time constant. Higher capacitance leads to longer delays, affecting circuit speed. Additionally, high capacitance can cause signal integrity issues such as distortion, ringing, and crosstalk, potentially compromising the reliability of the circuit. Furthermore, capacitance between nets results in dynamic power consumption during charging and discharging cycles. Resistance also plays a critical role, contributing to the RC time constant along with capacitance. Increased resistance prolongs signal propagation delay and can lead to voltage droop, especially in lengthy interconnects or high-current paths.
 
@@ -651,14 +654,14 @@ Now, There are some other steps as a part of Sign Off process. These are some ve
 <u>**Design Rule Check(DRC) :**</u><br>
 Design Rule Checking (DRC) is a pivotal step in the VLSI design workflow, tasked with verifying that the layout adheres rigorously to the specifications and constraints dictated by the fabrication technology. At its core, DRC scrutinizes the geometric aspects of the layout against a predefined set of rules, encompassing parameters like minimum feature size, spacing, width, overlap, and alignment. These rules are intricately tied to the specific fabrication process and technology node being utilized, with semiconductor foundries furnishing designers with a comprehensive set of guidelines to ensure manufacturability and yield. DRC operates across multiple levels of design hierarchy, encompassing cell, block, and chip levels, to ensure compliance at both component and overall layout levels.
 
-![alt text](Images/ASIC/basic_drc_checks.png)
+![alt text](ASIC/basic_drc_checks.png)
 
 <br><br>
 
 <u>**Layout Vs Schematic(LVS) :**</u><br>
 Layout vs. Schematic (LVS) verification is an indispensable phase in VLSI design, ensuring the harmony between the physical layout and its schematic representation. LVS scrutinizes the geometric layout of components, such as transistors and interconnects, against the schematic netlist derived from the design specifications. This comparison serves to validate the connectivity between nodes in the layout and their counterparts in the schematic, guaranteeing that electrical connections are accurately depicted in both representations. Moreover, LVS meticulously checks device parameters like size, placement, and orientation to confirm alignment with the schematic's specifications, ensuring consistency in device sizing and placement. 
 
-![alt text](Images/ASIC/lvs.png)
+![alt text](ASIC/lvs.png)
 
 After all the verifications done, the final step is to send the chip for fabrication. For that, the GDSII file is sent to fabrication unit to get the chip manufacture. 
 
