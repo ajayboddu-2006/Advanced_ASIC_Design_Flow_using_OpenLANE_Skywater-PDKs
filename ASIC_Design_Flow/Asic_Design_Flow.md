@@ -142,7 +142,7 @@ Macros and IPs serve as reusable functional blocks in VLSI design, yet they diff
 
 <u>**Concepts of Floorplanning :**</u> <br>
 
-![alt text](ASIC/Concept_of_floorplan.png)
+![alt text](ASIC_3/Concept_of_floorplan.png)
 
 In VLSI design, floorplanning is a critical early-stage process that involves the arrangement of functional blocks and components within the chip area, known as the die.
 
