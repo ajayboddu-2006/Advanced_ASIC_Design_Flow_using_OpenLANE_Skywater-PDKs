@@ -1,1 +1,3 @@
-
+# Openlane ASIC Design Flow
+---
+Welcome to the world of digital ASIC design and the OpenLane flow! This document serves as an introductory guide to understanding the fundamentals of ASIC design using OpenLane, an open-source RTL-to-GDSII flow developed by efabless and Google SkyWater Technology Foundry. ASIC design plays a crucial role in the creation of custom integrated circuits tailored to specific applications, ranging from consumer electronics to aerospace systems. OpenLane streamlines the ASIC design process, automating various stages such as synthesis, placement and routing, and physical verification. In this document, we'll explore the key concepts of ASIC design, the components of the OpenLane flow, and how to leverage its capabilities to design and fabricate custom integrated circuits.
