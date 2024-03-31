@@ -150,15 +150,4 @@ Routing topology algorithms aim to find the optimal arrangement of routing paths
 -  The new def file will create in the above location picorv32a_new.def
 -  this def file will be replaced by spef file picorv32a.spef which is our final file of extracted parasites.
 
----
-### Conclusion
----
-In conclusion, the OpenLane flow represents a significant advancement in the field of digital ASIC design, offering a comprehensive and automated solution for designing custom integrated circuits. By integrating various open-source tools and methodologies, OpenLane streamlines the entire RTL-to-GDSII design process, making it accessible to designers of all skill levels.
 
-The use of different tools within the OpenLane flow, such as Yosys for synthesis, ABC for logic optimization, and OpenROAD for placement and routing, allows for a flexible and customizable design environment. Designers have the freedom to choose the tools that best suit their needs and preferences, enabling them to optimize their designs for performance, power, and area.
-
-One of the key features of OpenLane is its ability to facilitate the design of custom layouts, such as a CMOS inverter, using the Magic layout editor. Designers can leverage the power of Magic to create, modify, and analyze their layouts with ease, ensuring that their designs meet the necessary specifications and constraints.
-
-Furthermore, the introduction of OpenLane's interactive flow opens up new possibilities for designers to interactively explore and refine their designs. With features such as real-time feedback, design exploration, and visualization tools, the interactive flow empowers designers to iterate quickly and efficiently, ultimately leading to better design outcomes.
-
-Looking ahead, the future of OpenLane's interactive flow is promising. As the open-source community continues to contribute to the development of OpenLane, we can expect to see further enhancements and improvements in usability, performance, and functionality. With ongoing advancements in tooling, methodologies, and collaborative efforts, OpenLane is poised to remain at the forefront of digital ASIC design, empowering designers to create innovative and cutting-edge integrated circuits for years to come
