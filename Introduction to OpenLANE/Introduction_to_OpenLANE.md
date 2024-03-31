@@ -45,7 +45,7 @@ A computer processor, also known as a Central Processing Unit (CPU), is the prim
   
   <br><br>
 
-  ![alt text](Images/Openlane_Introduction/Processor.png)
+  ![alt text](Openlane_Introduction/Processor.png)
 
 <br><br>
 
@@ -60,7 +60,7 @@ A "package" refers to the physical container or housing that holds and protects 
 The package typically consists of several layers, including a substrate, wire bonds or solder balls for electrical connections, encapsulation materials for protection, and external leads or pins for connection to the PCB.  <br>
 Now, let’s see the how a package looks like. In this case, we will learn about QFN-48 package.
 
-![alt text](Images/Openlane_Introduction/Package.png)
+![alt text](Openlane_Introduction/Package.png)
 
 <br><br>
 
@@ -68,7 +68,7 @@ A package is like protection to a chip or integrated chip integrated in it.
 
 <br>
 
-![alt text](Images/Openlane_Introduction/chip_in_package.png)
+![alt text](Openlane_Introduction/chip_in_package.png)
 
 <br>
 
@@ -76,7 +76,7 @@ In this case, QFN-48, there are various parts inside it,that is embedded in it
 
 <br>
 
-![alt text](Images/Openlane_Introduction/pads_die_core.png)
+![alt text](Openlane_Introduction/pads_die_core.png)
 
 <br>
 
@@ -89,7 +89,7 @@ Wire bonding is accomplished using specialized equipment that thermally and mech
 
 <br>
 
-![alt text](Images/Openlane_Introduction/wire_bonds.png)
+![alt text](Openlane_Introduction/wire_bonds.png)
 
 <br>
 
@@ -108,7 +108,7 @@ These are some of the typical parts of a chip. A typical chip also contains belo
 
 <br>
 
-![alt text](Images/Openlane_Introduction/ip_macro.png)
+![alt text](Openlane_Introduction/ip_macro.png)
 
 <br>
 
@@ -130,7 +130,7 @@ Different processors can have different ISAs  The ISA plays a crucial role in de
 
 <br>
 
-![alt text](Images/Openlane_Introduction/RISC-V.png)
+![alt text](Openlane_Introduction/RISC-V.png)
 
 <br>
 
@@ -141,7 +141,7 @@ There is an interface between RISC-V and its layout that is known as HDL(Hardwar
 
 <br>
 
-![alt text](Images/Openlane_Introduction/RISC-V_architecture.png)
+![alt text](Openlane_Introduction/RISC-V_architecture.png)
 
 <br>
 
@@ -149,7 +149,7 @@ This RISC-V is implemented in RTL and then converted into layout through physica
 
 <br>
 
-![alt text](Images/Openlane_Introduction/RISC_layout.png)
+![alt text](Openlane_Introduction/RISC_layout.png)
 
 <br>
 
@@ -162,11 +162,11 @@ In this way any software communicates with hardware. In this flow, specific oper
 
 <br>
 
-![alt text](Images/Openlane_Introduction/System_software.png)
+![alt text](Openlane_Introduction/System_software.png)
 
 <br>
 
-![alt text](Images/Openlane_Introduction/Risc_assembly.png)
+![alt text](Openlane_Introduction/Risc_assembly.png)
 
 <br>
 
@@ -174,7 +174,7 @@ So, in overall, the Instruction set Architecture is fed to the assembler through
 
 <br>
 
-![alt text](Images/Openlane_Introduction/RISC_flow.png)
+![alt text](Openlane_Introduction/RISC_flow.png)
 
 <br>
 
@@ -185,7 +185,7 @@ So, in overall, the Instruction set Architecture is fed to the assembler through
 
 <br>
 
-![alt text](Images/Openlane_Introduction/SOC.png)
+![alt text](Openlane_Introduction/SOC.png)
 
 <br>
 
@@ -197,7 +197,7 @@ A typical SOC consists of following parts.
 
 <br>
 
-![alt text](Images/Openlane_Introduction/SOC_design_flow.png)
+![alt text](Openlane_Introduction/SOC_design_flow.png)
 
 <br>
 
@@ -210,7 +210,7 @@ In practical digital ASIC design, three key components play crucial roles: RTL I
 
 <br>
     
-![alt text](Images/Openlane_Introduction/ASIC_design_flow.png)
+![alt text](Openlane_Introduction/ASIC_design_flow.png)
 
 <br>
 
@@ -239,7 +239,7 @@ The Open Source Google Skywater PDK (Process Design Kit) is a  initiative is aim
 
 <br>
 
-![alt text](Images/Openlane_Introduction/skywater.png)
+![alt text](Openlane_Introduction/skywater.png)
 
 <br>
 
@@ -254,11 +254,11 @@ Strive is a family which provides OPEN everything. It includes, Open RTL, Open E
 
 <br>
 
-![alt text](Images/Openlane_Introduction/Strive.png)
+![alt text](Openlane_Introduction/Strive.png)
 
 <br>
 
-![alt text](Images/Openlane_Introduction/Strive_types.png)
+![alt text](Openlane_Introduction/Strive_types.png)
 
 <br>
 
@@ -293,7 +293,7 @@ The Openlane design flow offers a comprehensive and open-source solution for the
 
 <br>
 
-![alt text](Images/Openlane_Introduction/Openlane_flow.png)
+![alt text](Openlane_Introduction/Openlane_flow.png)
 
 <br>
 
@@ -335,7 +335,7 @@ We have different design configurations in Openlane as mentioned below:
 
 <br>
 
-![alt text](Images/Openlane_Introduction/Design_exploration.png)
+![alt text](Openlane_Introduction/Design_exploration.png)
 
 <br>
 
@@ -343,7 +343,7 @@ Design exporation utility can be also be used for regression testing.
 
 <br>
 
-![alt text](Images/Openlane_Introduction/Regression_testing.png)
+![alt text](Openlane_Introduction/Regression_testing.png)
 
 <br>
 
@@ -353,7 +353,7 @@ Different designs have different strategies to achieve design target. Synthesis 
 
 <br>
 
-![alt text](Images/Openlane_Introduction/Synthesis_exploration.png)
+![alt text](Openlane_Introduction/Synthesis_exploration.png)
 
 <br>
 
@@ -361,11 +361,11 @@ In this ASIC design flow, we have a special process during Physical implementati
 
 <br>
 
-![alt text](Images/Openlane_Introduction/antenna_1.png)
+![alt text](Openlane_Introduction/antenna_1.png)
 
-![alt text](Images/Openlane_Introduction/Antennna_2.png)
+![alt text](Openlane_Introduction/Antennna_2.png)
 
-![alt text](Images/Openlane_Introduction/Antenna_3.png)
+![alt text](Openlane_Introduction/Antenna_3.png)
 
 <br>
 <br>
@@ -423,4 +423,19 @@ The OpenLane flow, with its automated RTL-to-GDSII capabilities, has played a pi
 Google SkyWater 130nm PDKs offer access to a mature semiconductor process node with well-characterized libraries and manufacturing capabilities. This collaboration between Google and the open-source community has provided a unique opportunity for designers to prototype and fabricate their designs at an affordable cost, further fueling the adoption of open-source ASIC design.
 
 Looking ahead, the future of open-source ASIC design holds immense promise. With ongoing developments in tooling, process technology, and community collaboration, we can expect to see continued innovation and growth in the field. Open-source ASIC design has the potential to democratize access to custom chip design, foster greater innovation and diversity in the semiconductor industry, and drive progress in a wide range of applications, from IoT devices to specialized accelerators and beyond
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
