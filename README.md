@@ -22,7 +22,8 @@ In this repository, you'll find a wealth of resources related to advanced ASIC d
 - [VLSI Fabrication Process](#fabri)
 - [Introduction to OpenLANE & Skywater 130nm PDKs](#intro-to-openlane)
 - [Labs for Openlane](#lab-openlane)
-    - [Day1](#jvmb)
+    - [Day1](https://github.com/ajayboddu-2006/Advanced_ASIC_Design_Flow_using_OpenLANE_Skywater-PDKs/blob/main/OpenLANE%20Flow%20(Labs)/Day1/Day1.md)
+    
     - [Day2](#cvjm)
     - [Day3](#dcuvjk)
     - [Day4](#cvjk)
