@@ -4,20 +4,19 @@ Welcome to the ASIC (Application-Specific Integrated Circuit) Design Flow docume
 
 ## Table of Contents
 
-- [ASIC Design Flow](#asic-design-flow)
   - [Table of Contents](#table-of-contents)
     - [ASIC DESIGN FLOW](#asic-design-flow-1)
-- [Steps in RTL to GDSII Flow](#steps-in-rtl-to-gdsii-flow)
+    - [Steps in RTL to GDSII Flow](#steps-in-rtl-to-gdsii-flow)
     - [Specification and Architecture](#specification-and-architecture)
-  - [Logic Design / Functional Verification](#logic-design--functional-verification)
-  - [RTL Synthesis](#rtl-synthesis)
-  - [Floorplanning \& Powerplanning](#floorplanning--powerplanning)
-  - [Placement](#placement)
-  - [Clock Tree Synthesis](#clock-tree-synthesis)
-  - [Static Timing Analysis](#static-timing-analysis)
-  - [Routing](#routing)
-  - [Sign Off](#sign-off)
-  - [GDSII](#gdsii)
+    - [Logic Design / Functional Verification](#logic-design--functional-verification)
+    - [RTL Synthesis](#rtl-synthesis)
+    - [Floorplanning \& Powerplanning](#floorplanning--powerplanning)
+    - [Placement](#placement)
+    - [Clock Tree Synthesis](#clock-tree-synthesis)
+    - [Static Timing Analysis](#static-timing-analysis)
+    - [Routing](#routing)
+    - [Sign Off](#sign-off)
+    - [GDSII](#gdsii)
     - [Conclusion](#conclusion)
 
 ---
@@ -30,7 +29,7 @@ Welcome to the ASIC (Application-Specific Integrated Circuit) Design Flow docume
 <a id="introduction"></a>
 Very-large-scale integration is the process of creating an integrated circuit by combining millions or billions of MOS transistors onto a single chip. VLSI began in the 1970s when MOS integrated circuit chips were developed and then widely adopted, enabling complex semiconductor and telecommunication technologies. 
 
-![alt text](ASIC/design_flow.png)
+![alt text](ASIC_3/design_flow.png)
 
 The “Y chart” in VLSI (Very Large Scale Integration) refers to a graphical representation that illustrates the interrelation between the design, fabrication, and test processes in semiconductor manufacturing. It is called the “Y chart” because of its shape, which resembles the letter “Y” .
 
@@ -46,7 +45,7 @@ GDSII - Graphic Design System II
 
 The RTL to GDSII flow is a process in VLSI design that converts an RTL description of a digital circuit into a physical layout ready for fabrication. It involves stages like RTL synthesis, floor planning, placement, routing, and ultimately generating the GDSII file format, which contains the layout data. This meticulous process ensures the final IC layout accurately reflects the desired functionality and meets fabrication requirements 
 
-![alt text](ASIC/rtl_gdsii.png)
+![alt text](ASIC_3/rtl_gdsii.png)
 
 ---
  ### Specification and Architecture
@@ -76,7 +75,7 @@ Convertes RTL to a circuit out of components from the Standard cell Library(SCL)
 
 Standard cells are pre-designed components used in VLSI design to build digital integrated circuits efficiently. They come in libraries containing various logic functions like AND, OR, and flip-flops. Each cell is characterized by its performance, power, and area metrics. Designers use these cells as building blocks to create custom digital circuits.
 
-![alt text](ASIC/examples_standard_cell.png)
+![alt text](ASIC_3/examples_standard_cell.png)
 
 Standard cells are of different sizes and may be same cells is of different sizes and properties.
 
@@ -117,7 +116,7 @@ Macro planning allows you to determine how much shelf space each of your product
 
 <u>**Macros:**</u> <br>Macros are predefined functional blocks with specific functionalities, such as processors, memory arrays, I/O interfaces. Macros are typically designed and verified independently and are then integrated into the chip design as reusable components.
 
-![alt text](ASIC/macros.png)
+![alt text](ASIC_3/macros.png)
 
 During macro placement, designers make strategic decisions regarding the placement of macros based on various factors including functional hierarchy, connectivity, power and signal integrity considerations, and physical design constraints.
 
@@ -125,7 +124,7 @@ During macro placement, designers make strategic decisions regarding the placeme
 <u>**IP integration or IP block placement:**</u><br>
 The floorplanning of IPs (Intellectual Properties) is commonly referred to as "IP integration" or "IP block placement" in the context of VLSI (Very Large Scale Integration) design. This process involves organizing and positioning IP cores within the chip's silicon die to optimize chip layout, signal routing, power distribution, and other design considerations. 
 
-![alt text](ASIC/ip.png)
+![alt text](ASIC_3/ip.png)
 
 <u>**IP’s:**</u> <br>
 These are pre-designed and pre-verified functional units or modules that serve specific purposes within an integrated circuit (IC) or chip design. Semiconductor IP cores are essential building blocks used by chip designers to accelerate the development process, reduce design complexity, and achieve faster time-to-market for new semiconductor products. 
@@ -164,11 +163,11 @@ Aspect ratio is a critical parameter in semiconductor manufacturing as it affect
 
 The following example, the utilization rate is 100% that is the chip is completely used by the functional blocks and the aspect ratio is 1 representing the shape of the die as square.
 
-![alt text](ASIC/example_1_util_aspect.png)
+![alt text](ASIC_3/example_1_util_aspect.png)
 
 In the following example, the Utilization rate is 50% indicating that the half of the part of the die area is occupied by the functional blocks or macros or IP’s. And the aspect ratio is 0.5 representing a rectangle shape.
 
-![alt text](ASIC/example_2_util_aspect.png)
+![alt text](ASIC_3/example_2_util_aspect.png)
 
 <u>**Concepts of PowerPlanning:**</u><br>
 
@@ -177,11 +176,11 @@ One of the primary functions of decoupling capacitors is to regulate the local v
 Decoupling capacitors absorb high-frequency noise generated by switching activities in digital circuits. By providing a low-impedance path to ground, they effectively filter out noise from the power supply lines, preventing it from propagating to other parts of the chip and causing interference or signal integrity issues 
 Decoupling capacitors plays a crucial role in noise filtering, transient response, resonance supression and Placement optimization.
 
-![alt text](ASIC/decoupling_capacitance.png)
+![alt text](ASIC_3/decoupling_capacitance.png)
 
 Following shows the powerplanning on a die forming a grid to maintain signal integrity to every functional block.
 
-![alt text](ASIC/poerplan_floorplan.png)
+![alt text](ASIC_3/poerplan_floorplan.png)
 
 ## Placement 
 <a id="place-and-route"></a>
@@ -191,7 +190,7 @@ Minimizing the total wire length is a primary objective during placement. Shorte
 Congestion occurs when certain regions of the chip become densely packed, leading to routing difficulties and potential timing violations. Effective placement algorithms employ congestion-aware techniques to evenly distribute components and alleviate congestion hotspots. 
 Proper spacing and alignment of cells are essential to ensure manufacturability and reliability. Placement algorithms enforce spacing rules to prevent design rule violations and optimize chip manufacturability. 
 
-![alt text](ASIC/placement.png)
+![alt text](ASIC_3/placement.png)
 
 There are mainly two types of Placement methodologies.
 - Global Placement
@@ -252,7 +251,7 @@ In this way, we can optimize the Placement upto a large extent.
 Clock tree synthesis (CTS) is a crucial step in the design of digital integrated circuits (ICs), particularly in very large scale integration (VLSI) design. It involves the generation of a network of clock distribution lines throughout the chip to ensure that the clock signal reaches all sequential elements (like flip-flops) synchronously and with minimum skew. 
 It ensures the building of Clock tree in such a way that the clock signal will have a  same delay or latency time for every functional block to travel from clock source to clock destination at the functional blocks.
 
-![alt text](ASIC/good_cts.png)
+![alt text](ASIC_3/good_cts.png)
 
 Above one is not valid in Clock tree syntheiss.
 
@@ -260,7 +259,7 @@ Above one is not valid in Clock tree syntheiss.
 
 Not only considering about maintaining the same delay for proper working of the circuit, we also have to consider the signal quality. And to maintain the signal integrity, we will place buffers. While building a clock Tree with buffers, we have to follow certain rules, like considering the wire length to place buffers at a distance from other buffers.
 
-![alt text](ASIC/h_cts.png)
+![alt text](ASIC_3/h_cts.png)
 
 There are different in which we can build a Clock Tree to maintain Signal quality with proper timing requirements.
 Various optimization techniques are applied to the clock tree to further reduce skew and delay. This may involve adjusting the placement and sizing of buffers, optimizing routing paths, and adjusting the clock tree topology. 
@@ -285,11 +284,11 @@ In clock tree synthesis (CTS), delta delay refers to the difference in delay exp
 <br>
 Modern CTS tools employ sophisticated algorithms to optimize the clock tree structure and minimize delta delay. These algorithms consider factors such as buffer placement, wire routing, and timing constraints to achieve balanced and efficient clock distribution. 
 
-![alt text](ASIC/delat_delay_in_cts.png)
+![alt text](ASIC_3/delat_delay_in_cts.png)
 
 To make ensure that there is no formation of Decoupling capacitance and there is no effect of delta delay in clock tree synthesis, one of the effective technique known is clock net shielding.
 
-![alt text](ASIC/clock_net_shielding.png)
+![alt text](ASIC_3/clock_net_shielding.png)
 
 VDD and VSS lines protect the clock signal from coupling and to prevent delta delay.
 <br>
@@ -297,7 +296,7 @@ In clock net shielding, the clock signal is shielded by the vdd and vss signal l
 <br><br>
 After the process of clock net shielding, the layout we can see is as follows:
 
-![alt text](ASIC/final_placement_with_cts.png)
+![alt text](ASIC_3/final_placement_with_cts.png)
 
 Power Aware CTS:
 Power-aware Clock Tree Synthesis (CTS) is a technique used in VLSI design to optimize clock distribution networks while considering power consumption as a key design metric. Traditional CTS focuses primarily on minimizing clock skew and improving timing characteristics, but power-aware CTS extends this by also addressing power-related issues. <br>
@@ -315,11 +314,11 @@ Balanced loading ensures that clock signals experience uniform propagation delay
 In Clock Tree Synthesis (CTS), Delay Tables are essential data structures used to characterize the propagation delay of buffers or inverters utilized in the clock tree. These tables provide detailed information about the delay introduced by each buffer or inverter under various operating conditions, such as input slew rates, output loads, and temperature variations. <br>
 Delay Tables typically consist of a set of delay values corresponding to different input slew rates and output loads. These values are obtained through pre-characterization or simulation of the buffers/inverters under various conditions. Each entry in the table corresponds to the delay introduced by the buffer or inverter for a specific combination of input slew rate and output load. Let us consider the following example
 
-![alt text](ASIC/cts_buffer_power_aware_cts.png)
+![alt text](ASIC_3/cts_buffer_power_aware_cts.png)
 
 By considering the above values and above circuit, consider the delay tables as below:
 
-![alt text](ASIC/delay_table_1.png)
+![alt text](ASIC_3/delay_table_1.png)
 
 ![alt text](ASIC_3/Delay_table_2.png)
 
@@ -340,7 +339,7 @@ Let’s see some of the timing related terminologies and rules of Static Timing 
 
 <u>**Capture Flop:**</u><br> A "capture flop" is a flip-flop or latch used to capture a signal or data at a specific point in a synchronous digital circuit. It is typically associated with the end of a timing path. Upon receiving the clock signal, the capture flop samples and captures the data input at the specific point in time defined by the clock edge.
 
-![alt text](ASIC/launch_capture_flops.png)
+![alt text](ASIC_3/launch_capture_flops.png)
 
 <br><br><br><br>
 
@@ -396,7 +395,7 @@ Let’s understand the difference between Fast Slew and Slow Slew.
 <u>**Fanout:**</u><br>  "Fanout" refers to the number of logic gates or other load components that can be connected to the output of a specific logic gate or driver without causing performance degradation or violating electrical specifications. 
 Let us consider the following example, for the maximum fanout.
 
-![alt text](ASIC/fanout.png)
+![alt text](ASIC_3/fanout.png)
 
 <br><br><br>
 
