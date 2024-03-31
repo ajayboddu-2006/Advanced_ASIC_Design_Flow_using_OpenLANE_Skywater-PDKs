@@ -24,7 +24,7 @@ In this repository, you'll find a wealth of resources related to advanced ASIC d
 - [Labs for Openlane](#lab-openlane)
     - [Day1](https://github.com/ajayboddu-2006/Advanced_ASIC_Design_Flow_using_OpenLANE_Skywater-PDKs/blob/main/OpenLANE%20Flow%20(Labs)/Day1/Day1.md)
     
-    - [Day2](#cvjm)
+    - [Day2](https://github.com/ajayboddu-2006/Advanced_ASIC_Design_Flow_using_OpenLANE_Skywater-PDKs/blob/main/OpenLANE%20Flow%20(Labs)/Day2/Day2.md)
     - [Day3](#dcuvjk)
     - [Day4](#cvjk)
     - [Day5](#vbkl)
