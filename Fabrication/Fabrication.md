@@ -22,7 +22,7 @@ Welcome to the documentation on fabrication processes! This document provides an
 
 Fabrication in VLSI (Very Large Scale Integration) refers to the process of manufacturing integrated circuits (ICs) on a semiconductor substrate, typically made of silicon. This process involves a series of intricate steps to create the complex structures and circuitry that constitute modern electronic devices.  The goal of VLSI fabrication is to create integrated circuits with high precision, reliability, and performance while maximizing yield and minimizing costs. This process is performed in specialized facilities called semiconductor fabs, which are equipped with advanced tools and clean room environments to ensure the highest level of quality control and precision.
 
-![alt text](Fabrication/Fabrication_flow.png)
+![alt text](Fabrication_2/Fabrication_flow.png)
 
 Let’s see some of the techniques used in the process of fabrication.
 
@@ -174,7 +174,7 @@ Initially the Si Ingots are manufactured from the Silicon, and then, wafers are 
 And then we have to select a substrate for the furthur process.
 And the substrate should have high resistivity and the doping concentration   of the substrate should be less than the doping concentration of the well which will be formed later.
 
-![alt text](Fabrication/img1.png)
+![alt text](Fabrication_2/img1.png)
 
 Now on the substrate, a layer of SiO2(of thickness 40nm) is formed and on this layer, 80nm of Si3N4 layer is formed. And now, the process of Photolithography is started. And as a part of Photolithography, A layer of photoresist is formed above these layers.
 
