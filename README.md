@@ -21,7 +21,7 @@ In this repository, you'll find a wealth of resources related to advanced ASIC d
 - [VLSI ASIC Design Flow](https://github.com/ajayboddu-2006/Advanced_ASIC_Design_Flow_using_OpenLANE_Skywater-PDKs/blob/main/ASIC_Design_Flow/Asic_Design_Flow.md)
 - [VLSI Fabrication Process](https://github.com/ajayboddu-2006/Advanced_ASIC_Design_Flow_using_OpenLANE_Skywater-PDKs/blob/main/Fabrication/Fabrication.md)
 - [Introduction to OpenLANE & Skywater 130nm PDKs](https://github.com/ajayboddu-2006/Advanced_ASIC_Design_Flow_using_OpenLANE_Skywater-PDKs/blob/main/Introduction%20to%20OpenLANE/Introduction_to_OpenLANE.md)
-- [Labs for Openlane](#lab-openlane)
+- [Labs for Openlane](https://github.com/ajayboddu-2006/Advanced_ASIC_Design_Flow_using_OpenLANE_Skywater-PDKs/tree/main/OpenLANE%20Flow%20(Labs))
     - [Day1](https://github.com/ajayboddu-2006/Advanced_ASIC_Design_Flow_using_OpenLANE_Skywater-PDKs/blob/main/OpenLANE%20Flow%20(Labs)/Day1/Day1.md)
     
     - [Day2](https://github.com/ajayboddu-2006/Advanced_ASIC_Design_Flow_using_OpenLANE_Skywater-PDKs/blob/main/OpenLANE%20Flow%20(Labs)/Day2/Day2.md)
