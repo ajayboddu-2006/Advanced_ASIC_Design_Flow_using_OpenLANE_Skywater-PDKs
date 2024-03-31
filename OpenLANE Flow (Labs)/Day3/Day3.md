@@ -1,3 +1,5 @@
+# DAY-3
+
 # Library cell design in Magic & Characterization in ngSpice
 
 ## Spice Deck creation for CMOS:
