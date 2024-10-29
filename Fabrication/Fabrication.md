@@ -1,12 +1,12 @@
 # Fabrication 
 
-Welcome to the documentation on fabrication processes! This document provides an overview of the fabrication process, various steps involved, and specifically delves into the 16-nm CMOS fabrication process. In this section, we will see the principles of Fabrication, various processes involved in fabrication. And, especially, we will be focusing on 16-mask CMOS fabrication process.
+Welcome to the documentation on fabrication processes! This document provides an overview of the fabrication process, various steps involved, and specifically delves into the 16-Mask CMOS fabrication process. In this section, we will see the principles of Fabrication, various processes involved in fabrication. And, especially, we will be focusing on 16-mask CMOS fabrication process.
 
 ### Table of Contents
 
 1. [Introduction to Fabrication](#intro)
 2. [Fabrication Process Overview](#fabrication-process-overview)
-3. [16-nm CMOS Fabrication](#16-nm-cmos-fabrication)
+3. [16-Mask CMOS Fabrication](#16-Mask-cmos-fabrication)
 4. [Conclusion](#conclusion)
 
 ---
@@ -166,7 +166,7 @@ Then we will get our final chip ready....!
 <br><br>
 ---
 
-### 16-nm CMOS Fabrication
+### 16-Mask CMOS Fabrication
 ---
 In the realm of semiconductor manufacturing, the 16-mask CMOS (Complementary Metal-Oxide-Semiconductor) fabrication process stands out as a sophisticated method for crafting integrated circuits with high performance and efficiency. This process involves a series of intricate steps, each controlled by precise patterning using 16 different masks. Below, we delve into the sequential stages of this fabrication process and below, we can see the images for the every phase of fabrication process:
 Initially the Si Ingots are manufactured from the Silicon, and then, wafers are extracted from these Si Ingots. These silicon wafers are either of the substrates, that is p-type or n-type.
